@@ -7,7 +7,6 @@ async function handler(req, res) {
         const uri = "mongodb+srv://canerozkan:canerozkan74@cluster1.sczfu.mongodb.net/meetups?retryWrites=true&w=majority";
         const client = await MongoClient.connect(uri);
         const db = client.db();
-
         const meetupCollection = db.collection('meetups');
         const result = await meetupCollection.insertOne(data);
 
